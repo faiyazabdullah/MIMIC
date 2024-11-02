@@ -8,6 +8,11 @@ praw = "*"
 groq = "*"
 pandas = "*"
 python-dotenv = "*"
+ipykernel = "*"
+matplotlib = "*"
+plotly = "*"
+openpyxl = "*"
+xlsxwriter = "*"
 
 [dev-packages]
 
