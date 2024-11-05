@@ -13,6 +13,7 @@ matplotlib = "*"
 plotly = "*"
 openpyxl = "*"
 xlsxwriter = "*"
+wordcloud = "*"
 
 [dev-packages]
 
