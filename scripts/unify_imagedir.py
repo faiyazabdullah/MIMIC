@@ -15,5 +15,4 @@ import zipfile
 
 # print(len(os.listdir("./images")))
 
-
 print("DONE")

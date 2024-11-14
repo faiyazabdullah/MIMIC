@@ -18,12 +18,19 @@ reddit = praw.Reddit(
 )
 
 subreddits = [
-    "exmuslim"
+    # "atheism"
     # "IsraelPalestine",
     # "progressive_islam",
-    # "AskMiddleEast",
-    # "islam"
+    # "AskMiddleEast"
+    # "memes"
+    # "AteistTurk"
+    "exmuslim"
+    # "europe"
     # "Izlam"
+    # "all"
+    # "darkjokes"
+    # "extomatoes",
+    # "shitposting"
 ]
 
 batches = 0
@@ -52,9 +59,12 @@ def create_ds(starts: int = 0):
     for _subreddit in subreddits:
         print("Exploring", _subreddit)
         posts = reddit.subreddit(_subreddit).search(
-            query="meme", limit=base_limit)
+            query="meme", limit=base_limit, time_filter="month")
 
+        # cnt = 0
         for i, post in enumerate(posts):
+            # cnt += 1
+            print("Post", i, ":")
             if i < starts:
                 continue
             try:
@@ -95,7 +105,7 @@ def create_ds(starts: int = 0):
                         print("skipping")
                         continue
                     elif label == -2:
-                        return
+                        break
 
                     collections["image"].append(post.url)
                     collections["caption"].append(content)
@@ -107,12 +117,13 @@ def create_ds(starts: int = 0):
                 print(e)
                 continue
 
+        # print(cnt)
         df = pd.DataFrame.from_dict(collections)
-        df.to_csv(f"{_subreddit}.csv", index=False)
+        df.to_csv(f"{_subreddit}_2.csv", index=False)
         collections["image"].clear()
         collections["caption"].clear()
         collections["label"].clear()
 
 
 if __name__ == "__main__":
-    create_ds(200)
+    create_ds()
