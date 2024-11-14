@@ -14,6 +14,7 @@ plotly = "*"
 openpyxl = "*"
 xlsxwriter = "*"
 wordcloud = "*"
+seaborn = "*"
 
 [dev-packages]
 
