@@ -15,6 +15,7 @@ openpyxl = "*"
 xlsxwriter = "*"
 wordcloud = "*"
 seaborn = "*"
+huggingface-hub = "*"
 
 [dev-packages]
 
