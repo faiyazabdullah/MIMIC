@@ -1,1 +1,1 @@
-# MESSI: Anti-Muslim Hate Memes Detection and Sentiment Identification Using Multimodal Learning
+# MESSI-ML: Anti-Muslim Hate Memes Detection and Sentiment Identification Using Multimodal Learning
