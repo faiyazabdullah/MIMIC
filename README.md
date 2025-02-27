@@ -1,9 +1,12 @@
 # MIMIC: <ins>M</ins>ultimodal <ins>I</ins>slamophobic <ins>M</ins>eme <ins>I</ins>dentification and <ins>C</ins>lassification
 
+## Paper:
+Read the paper [MIMIC](https://arxiv.org/abs/2412.00681) - accepted at NeurIPS 2024 Workshop MusIML
+
 <!-- [Dataset - HuggingFace version will be released upon acceptance](https://huggingface.co/datasets/smji/muslim-hateful-memes) -->
 ## Dataset:
 
-The dataset is available [here](./dataset.csv) in CSV format. The images are available in the [images directory](./images/). The HuggingFace version will be released upon acceptance.
+The dataset is available [here](./dataset.csv) in CSV format. The images are available in the [images directory](./images/).
 
 ## Training:
 
